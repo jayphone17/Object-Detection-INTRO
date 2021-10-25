@@ -10,13 +10,13 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 cudnn.benchmark = True
 
 # Data parameters
-data_folder = '../../../dataset/VOCdevkit'  # data files root path
+data_folder = '../dataset/VOCdevkit'  # data files root path
 keep_difficult = True  # use objects considered difficult to detect?
 n_classes = len(label_map)  # number of different types of objects
 
 # Learning parameters
 total_epochs = 230 # number of epochs to train
-batch_size = 32  # batch size
+batch_size = 16  # batch size
 workers = 4  # number of workers for loading data in the DataLoader
 print_freq = 100  # print training status every __ batches
 lr = 1e-3  # learning rate
