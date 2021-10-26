@@ -1,6 +1,72 @@
 # Object-Detection-INTRO
 目标检测入门以及挖坑中🔨
 
+#1. 目标检测概念与思路
+
+<img src=".\figs\3-1.png" alt="3-1" style="zoom:40%;" />
+
+<img src=".\figs\3-2.png" alt="3-2" style="zoom:20%;" />
+
+
+
+#2. 框定义
+
+<img src=".\figs\3-3.png" alt="3-3" style="zoom:50%;" />
+
+
+
+#3. IOU
+
+<img src=".\figs\3-4.png" alt="3-4" style="zoom:30%;" />
+
+
+
+#4. Anchor or Prior BoundingBOX ？
+
+![3-15](.\figs\3-15.jpg)
+
+<img src=".\figs\3-13.png" alt="3-13" style="zoom:48%;" />
+
+<img src=".\figs\3-14.png" alt="3-14" style="zoom:40%;" />
+
+
+
+
+
+#5. Model
+
+<img src=".\figs\3-17.png" alt="3-17" style="zoom:80%;" />
+
+<img src=".\figs\3-19.png" alt="3-19" style="zoom:70%;" />
+
+
+
+#6. 分类头回归头
+
+<img src=".\figs\3-21.png" alt="3-21" style="zoom:80%;" />
+
+<img src=".\figs\3-22.png" alt="3-22" style="zoom:65%;" />
+
+<img src=".\figs\3-23.png" alt="3-23" style="zoom:65%;" />
+
+<img src=".\figs\3-24.png" alt="3-24" style="zoom:67%;" />
+
+<img src=".\figs\3-25.png" alt="3-25" style="zoom:75%;" />
+
+
+
+#7. Loss
+
+<img src=".\figs\3-27.png" alt="3-27" style="zoom:75%;" />
+
+<img src=".\figs\3-28.png" alt="3-28" style="zoom:75%;" />
+
+<img src=".\figs\loss_func.png" alt="loss_func" style="zoom:75%;" />
+
+原文损失函数详解：[3.5 损失函数 (datawhalechina.github.io)](https://datawhalechina.github.io/dive-into-cv-pytorch/#/chapter03_object_detection_introduction/3_5)
+
+#8. Train
+
 结果（尝试过把batch从32改成16以及8，以下结果是batch为8的结果）：
 
 Epoch: [0][0/2069]      Batch Time 5.305 (5.305)        Data Time 3.046 (3.046) Loss 27.0807 (27.0807)
@@ -45,4 +111,9 @@ Epoch: [0][1900/2069]   Batch Time 0.117 (0.127)        Data Time 0.000 (0.002) 
 
 Epoch: [0][2000/2069]   Batch Time 0.118 (0.127)        Data Time 0.001 (0.002) Loss 5.3326 (5.8337)
 
-（貌似是欠拟合了。。😓有空再回来分析代码）
+（貌似是欠拟合了。。一个epoch我就直接终止了。😓有空再回来分析代码）
+
+#9. NMS非极大值抑制
+
+![3-29](.\figs\3-29.png)
+
